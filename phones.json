@@ -1,0 +1,17 @@
+[
+    {
+        "caracteristicas": "7 day battery",
+        "nombre": "Nokia 123",
+        "valor": "$24.99"
+    },
+    {
+        "caracteristicas": "Silver",
+        "nombre": "Iphone",
+        "valor": "$899.99"
+    },
+    {
+        "caracteristicas": "5 mpx. Android 5.0",
+        "nombre": "Samsung Galaxy",
+        "valor": "$93.99"
+    }
+]

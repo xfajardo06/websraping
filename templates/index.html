@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/styles.css" type="text/css">
+    <title> Web Scraping</title>
+
+  </head>
+  <body>
+    <h4 class="sub-title"> Productos: Celulares</h4>
+    <table>
+      <thead class="table-head">
+        <tr>
+          <td class="td-head" >Celular</td>
+          <td class="td-head" >Caracteristicas</td>
+          <td class="td-head">Precio</td>
+        </tr>
+      </thead>
+      <tbody>
+          {% for phone in datoP%}
+        <tr>
+          <td >{{phone.nombre}}</td>
+          <td>{{phone.caracteristicas}}</td>
+          <td>{{phone.valor}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <h4 class="sub-title"> Productos: Computadoras</h4>
+    <table>
+      <thead class="table-head">
+        <tr>
+          <td class="td-head">Computador</td>
+          <td class="td-head">Caracteristicas</td>
+          <td class="td-head">Precio</td>
+        </tr>
+      </thead>
+      <tbody >
+          {% for computer in datoC%}
+        <tr>
+          <td>{{computer.nombre}}</td>
+          <td>{{computer.caracteristicas}}</td>
+          <td>{{computer.valor}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+
+
+</html>
