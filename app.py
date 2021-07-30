@@ -1,12 +1,8 @@
 from flask import Flask, render_template
 import requests
 from urllib.request import urlopen
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-import time
 from bs4 import BeautifulSoup
 import json
-import pandas as pd
 app = Flask(__name__)
 
 @app.route("/", methods = ['GET'])
