@@ -24,19 +24,17 @@ def get_dato():
         driver.get(url)
         print('url', url)
         time.sleep(2)
-        screen_height = driver.execute_script("return window.screen.height;")
-        print(screen_height)
-        i=1
+        screen_height = driver.execute_script("return document.body.scrollHeight")
+
         while True:
-            driver.execute_script("window.scrollTo(0, {screen_height}*{i});".format(screen_height=screen_height, i=i))
-            i += 1
+            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
             time.sleep(2)
-            scroll_height = driver.execute_script("return document.body.scrollHeight;")
-            print('hola',scroll_height)
-            if screen_height == scroll_height:
+            scroll_height = driver.execute_script("return document.body.scrollHeight")
+            print('height',scroll_height)
+            if scroll_height == screen_height:
                 print('break while')
                 break
-            screen_height=scroll_height
+            screen_height = scroll_height
 
 
             allObj = BeautifulSoup(driver.page_source, 'html.parser')
