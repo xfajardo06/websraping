@@ -27,21 +27,41 @@
       </tbody>
     </table>
 
-    <h4 class="sub-title"> Productos: Computadoras</h4>
+    <h4 class="sub-title"> Productos: Tablets</h4>
     <table>
       <thead class="table-head">
         <tr>
-          <td class="td-head">Computador</td>
+          <td class="td-head" >Tablets</td>
+          <td class="td-head" >Caracteristicas</td>
+          <td class="td-head">Precio</td>
+        </tr>
+      </thead>
+      <tbody>
+          {% for tablet in datoT%}
+        <tr>
+          <td >{{tablet.nombre}}</td>
+          <td>{{tablet.caracteristicas}}</td>
+          <td>{{tablet.valor}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <h4 class="sub-title"> Productos: Laptops</h4>
+    <table>
+      <thead class="table-head">
+        <tr>
+          <td class="td-head">Laptops</td>
           <td class="td-head">Caracteristicas</td>
           <td class="td-head">Precio</td>
         </tr>
       </thead>
       <tbody >
-          {% for computer in datoC%}
+          {% for laptop in datoL%}
         <tr>
-          <td>{{computer.nombre}}</td>
-          <td>{{computer.caracteristicas}}</td>
-          <td>{{computer.valor}}</td>
+          <td>{{laptop.nombre}}</td>
+          <td>{{laptop.caracteristicas}}</td>
+          <td>{{laptop.valor}}</td>
         </tr>
         {% endfor %}
       </tbody>
